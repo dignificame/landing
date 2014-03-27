@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>dignifica.me</title>
+
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/stylish-portfolio.css" rel="stylesheet">
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="top" class="header">
+            <div class="vert-text">
+                <h1>Dignifica.me</h1>
+                <h2>más que un buscador de ofertas de trabajo</h2>
+                <a href="#about" class="btn btn-default btn-lg">Más información</a>
+            </div>
+        </div>
+
+        <div id="about" class="intro">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <h2>Dignifica.me es un proyecto surgido de <a href="http://elhackaton.com">El Hackatón</a> y que quedó tercer clasificado.</h2>
+                        <p class="lead">Liberamos el <a href="https://github.com/elhackaton/dignifica.me">código</a> que desarrollamos durante aquellas 28 horas con licencia GPL v3, pero ahora estamos construyendo dignifica.me desde cero, con menos sueño y más perspectiva.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="services" class="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4 text-center">
+                        <h2>El equipo</h2>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-2 text-center">
+                        <div class="service-item">
+                            <img class="img-responsive img-circle" src="img/javi.jpg">
+                            <h4>Javi Imbernón</h4>
+                            <p>Backend</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="service-item">
+                            <img class="img-responsive img-circle" src="img/jorge.jpg">
+                            <h4>Jorge Martín</h4>
+                            <p>Android</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="service-item">
+                            <img class="img-responsive img-circle" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash3/t1.0-1/c26.26.328.328/s160x160/574447_4061871076652_673454891_n.jpg">
+                            <h4>Marc Toral</h4>
+                            <p>Frontend</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="service-item">
+                            <img class="img-responsive img-circle" src="img/rafa.png">
+                            <h4>Rafa Prats</h4>
+                            <p>iOS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout">
+            <div class="vert-text">
+                <h3>Encuentra un trabajo digno y denuncia ofertas abusivas</h3>
+            </div>
+        </div>
+
+        <div id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <h2>Demo de lo que desarrollamos durante "El Hackatón"</h2>
+                        <hr>
+                        <div class="video">
+                            <iframe src="//www.youtube.com/embed/lumGrfZEw9M" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <hr>
+                        <div class="video">
+                            <iframe src="//www.youtube.com/embed/FsubDFVSkA4" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="call-to-action">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <h3>Prometemos terminar el desarrollo y aportar nuestro granito de arena a la mejora de las ofertas de trabajo, pero nos llevará un tiempo. <strong>¡Vuelve pronto!</strong></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery-1.10.2.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.fitvids.js"></script>
+        <script>
+            $("#menu-close").click(function(e) {
+                e.preventDefault();
+                $("#sidebar-wrapper").toggleClass("active");
+            });
+        </script>
+        <script>
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#sidebar-wrapper").toggleClass("active");
+            });
+        </script>
+        <script>
+            $(function() {
+                $('a[href*=#]:not([href=#])').click(function() {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        if (target.length) {
+                            $('html,body').animate({
+                                scrollTop: target.offset().top
+                            }, 1000);
+                            return false;
+                        }
+                    }
+                });
+
+                $(".video").fitVids();
+            });
+        </script>
+    </body>
+</html>
